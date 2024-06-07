@@ -1,0 +1,96 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="header-fields">
+      <div class="row">
+        <img class="img" src="{{img}}" data-edit="img" title="{{name}}" />
+        <div class="column-x3-img">
+          <label class="label">{{localize 'sta.item.genericitem.name'}}</label>
+          <input name="name" type="text" value="{{name}}" placeholder="Name" />
+        </div>
+        <div class="column-x1">
+          <label class="label">{{localize 'sta.actor.belonging.weapon.range'}}</label>
+          <select name="system.range">
+            {{#select system.range}}
+            <option value="{{localize 'sta.actor.belonging.weapon.close'}}">{{localize 'sta.actor.belonging.weapon.close'}}</option>
+            <option value="{{localize 'sta.actor.belonging.weapon.medium'}}">{{localize 'sta.actor.belonging.weapon.medium'}}</option>
+            <option value="{{localize 'sta.actor.belonging.weapon.long'}}">{{localize 'sta.actor.belonging.weapon.long'}}</option>
+            {{/select}}
+          </select>
+        </div>
+      </div>
+      <label class="label">{{localize 'sta.actor.belonging.weapon.qualities'}}</label>
+      <div class="row">
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.item.genericitem.opportunity'}}</label>
+          <input type="number" name="system.opportunity" value="{{system.opportunity}}" data-dtype="Number" />
+        </div>
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.item.genericitem.escalation'}}</label>
+          <input type="number" name="system.escalation" value="{{system.escalation}}" data-dtype="Number" />
+        </div>
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.actor.belonging.weapon.damage'}}</label>
+          <div>
+            <input type="number" name="system.damage" value="{{system.damage}}" data-dtype="Number" />
+            <label class="label">+ {{localize 'sta.actor.character.discipline.security'}} </label>
+          </div>
+        </div>
+        <div class="column-x4"></div>
+      </div>
+      <div class="row">
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.actor.belonging.weapon.hiddenx'}}</label>
+          <input type="number" name="system.qualities.hiddenx" value="{{system.qualities.hiddenx}}" data-dtype="Number" />
+        </div>
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.actor.belonging.weapon.piercingx'}}</label>
+          <input type="number" name="system.qualities.piercingx" value="{{system.qualities.piercingx}}" data-dtype="Number" />
+        </div>
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.actor.belonging.weapon.viciousx'}}</label>
+          <input type="number" name="system.qualities.viciousx" value="{{system.qualities.viciousx}}" data-dtype="Number" />
+        </div>
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.actor.belonging.weapon.versatilex'}}</label>
+          <input type="number" name="system.qualities.versatilex" value="{{system.qualities.versatilex}}" data-dtype="Number" />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="column-x4"> 
+          <input class="" type="checkbox" name="system.qualities.area" data-dtype="Boolean" {{checked system.qualities.area}}>
+          <label class="label">{{localize 'sta.actor.belonging.weapon.area'}}</label>
+        </div>
+        <div class="column-x4"> 
+          <input class="" type="checkbox" name="system.qualities.spread" data-dtype="Boolean" {{checked system.qualities.spread}}>
+          <label class="label">{{localize 'sta.actor.belonging.weapon.spread'}}</label>
+        </div>
+        <div class="column-x4">
+          <input class="" type="checkbox" name="system.qualities.highyield" data-dtype="Boolean" {{checked system.qualities.highyield}}>
+          <label class="label">{{localize 'sta.actor.belonging.weapon.highyield'}}</label>
+        </div>
+        <div class="column-x4">
+          <input class="" type="checkbox" name="system.qualities.devastating" data-dtype="Boolean" {{checked system.qualities.devastating}}>
+          <label class="label">{{localize 'sta.actor.belonging.weapon.devastating'}}</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-x4"></div>
+          <div class="column-x4"> 
+            <input class="" type="checkbox" name="system.qualities.dampening" data-dtype="Boolean" {{checked system.qualities.dampening}}>
+            <label class="label">{{localize 'sta.actor.belonging.weapon.dampening'}}</label>
+          </div>
+          <div class="column-x4"> 
+            <input class="" type="checkbox" name="system.qualities.calibration" data-dtype="Boolean" {{checked system.qualities.calibration}}>
+            <label class="label">{{localize 'sta.actor.belonging.weapon.calibration'}}</label>
+          </div>
+          <div class="column-x4">
+            <input class="" type="checkbox" name="system.includescale" data-dtype="Boolean" {{checked system.includescale}}>
+            <label class="label">{{localize 'sta.actor.belonging.weapon.includescale'}}</label>
+          </div>
+        </div>
+      </div>
+    <div class="description">
+      <label class="label">{{localize 'sta.item.genericitem.description'}}</label>
+        {{editor system.description target="system.description" button=true owner=owner editable=true}}
+    </div>
+</form>

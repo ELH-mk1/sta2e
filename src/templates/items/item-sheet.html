@@ -1,0 +1,29 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <div class="header-fields">
+    <div class="row">
+      <img class="img" src="{{img}}" data-edit="img" title="{{name}}" />
+      <div class="column-x3-img">
+        <label class="label">{{localize 'sta.item.genericitem.name'}}</label>
+        <input name="name" type="text" value="{{name}}" placeholder="Name" />
+      </div>
+      <div class="column-x1">
+        <label class="label">{{localize 'sta.actor.belonging.other.quantity'}}</label>
+        <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="column-x1">
+        <label class="label">{{localize 'sta.item.genericitem.opportunity'}}</label>
+        <input type="number" name="system.opportunity" value="{{system.opportunity}}" data-dtype="Number" />
+      </div>
+      <div class="column-x1">
+        <label class="label">{{localize 'sta.item.genericitem.escalation'}}</label>
+        <input type="number" name="system.escalation" value="{{system.escalation}}" data-dtype="Number" />
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <label class="label">{{localize 'sta.item.genericitem.description'}}</label>
+    {{editor system.description target="system.description" button=true owner=owner editable=true}}
+  </div>
+</form>

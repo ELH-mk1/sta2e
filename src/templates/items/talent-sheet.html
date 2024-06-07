@@ -1,0 +1,77 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <div class="header-fields">
+    <div class="row">
+      <img class="img" src="{{img}}" data-edit="img" title="{{name}}" />
+      <div class="column-x3-img">
+        <label class="label">{{localize 'sta.item.genericitem.name'}}</label>
+        <input name="name" type="text" value="{{name}}" placeholder="Name" />
+      </div>
+      <div class="column-x1">
+        <label class="label">{{localize 'sta.item.talent.type.title'}}</label>
+        <select name="system.talenttype.typeenum">
+          {{#select system.talenttype.typeenum}}
+          <option value="general">{{localize 'sta.item.talent.type.general'}}</option>
+          <option value="discipline">{{localize 'sta.item.talent.type.discipline'}}</option>
+          <option value="species">{{localize 'sta.actor.character.species'}}</option>
+          <option value="house">{{localize 'sta.item.talent.houselegacy'}}</option>
+          {{/select}}
+        </select>
+      </div>
+    </div>
+    {{#if (eq system.talenttype.typeenum "discipline")}}
+    <div class="row">
+      <div class="column-x1"></div>
+      <div class="column-x3">
+        <label class="label">{{localize 'sta.item.talent.requires'}}</label>
+        <select name="system.talenttype.description">
+          {{#select system.talenttype.description}}
+          <option value="command">{{localize 'sta.actor.character.discipline.command'}}</option>
+          <option value="conn">{{localize 'sta.actor.character.discipline.conn'}}</option>
+          <option value="engineering">{{localize 'sta.actor.character.discipline.engineering'}}</option>
+          <option value="medicine">{{localize 'sta.actor.character.discipline.medicine'}}</option>
+          <option value="science">{{localize 'sta.actor.character.discipline.science'}}</option>
+          <option value="security">{{localize 'sta.actor.character.discipline.security'}}</option>
+          {{/select}}
+        </select>
+      </div>
+      <div class="column-x2">
+        <input type="number" name="system.talenttype.minimum" value="{{system.talenttype.minimum}}" />
+        <label class="label">+</label>
+      </div>
+      <div class="column-x1"></div>
+    </div>
+    {{else if (eq system.talenttype.typeenum "species")}}
+    <div class="row">
+      <div class="column-x1"></div>
+      <div class="column-x2">
+        <label class="label">{{localize 'sta.item.talent.requires'}} {{localize 'sta.actor.character.species'}} </label>
+        <input style="width:100px;" type="text" name="system.talenttype.description" value="{{system.talenttype.description}}" />
+      </div>
+      <div class="column-x1"></div>
+    </div>
+    {{else if (eq system.talenttype.typeenum "house")}}
+    <div class="row">
+      <div class="column-x1"></div>
+      <div class="column-x3">
+        <label class="label">{{localize 'sta.item.talent.requires'}} {{localize 'sta.item.talent.houserequired'}} </label>
+        <select name="system.talenttype.description">
+          {{#select system.talenttype.description}}
+          <option value="leaders">{{localize 'sta.item.house.legacy.leaders'}}</option>
+          <option value="warriors">{{localize 'sta.item.house.legacy.warriors'}}</option>
+          <option value="spacefarers">{{localize 'sta.item.house.legacy.spacefarers'}}</option>
+          <option value="engineers">{{localize 'sta.item.house.legacy.engineers'}}</option>
+          <option value="scientists">{{localize 'sta.item.house.legacy.scientists'}}</option>
+          <option value="physicians">{{localize 'sta.item.house.legacy.physicians'}}</option>
+          {{/select}}
+        </select>
+      </div>
+      <div class="column-x1"></div>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="description">
+    <label class="label">{{localize 'sta.item.genericitem.description'}}</label>
+    {{editor system.description target="system.description" button=true owner=owner editable=true}}
+  </div>
+</form>

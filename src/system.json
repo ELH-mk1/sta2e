@@ -1,0 +1,55 @@
+{
+	"id": "sta2e",
+	"title": "Star Trek Adventures Roleplaying Game (2nd Edition)",
+	"description": "An unofficial rendition of the Modiphius tabletop role playing game system.",
+	"version": "1.0.0",
+	"compatibility": {
+		"verified": "12"
+	},
+	"templateVersion": 1,
+	"authors": [
+		{
+			"name": "ELH",
+			"discord": "elhmk1",
+			"flags": {}
+		}
+	],
+	"esmodules": ["module/sta.js"],
+	"socket": true,
+	"styles": ["sta.css","sta_fabulist.css"],
+	"packs": [],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "es",
+			"name": "Spanish",
+			"path": "lang/es.json"
+		},
+		{
+			"lang": "de",
+			"name": "German",
+			"path": "lang/de.json"
+		},
+		{
+			"lang": "fr",
+			"name": "French",
+			"path": "lang/fr.json"
+		},
+		{
+			"lang": "pt",
+			"name": "Portugese",
+			"path": "lang/pt.json"
+		}
+	],
+	"gridDistance": 5,
+	"gridUnits": "m",
+	"primaryTokenAttribute": "stress",
+	"secondaryTokenAttribute": "determination",
+	"url": "https://github.com/ELH-mk1/sta2e",
+	"manifest": "https://raw.githubusercontent.com/mkscho63/sta/master/src/system.json",
+	"download": "https://raw.githubusercontent.com/mkscho63/sta/v1.1.11/package/sta-v1.1.11.zip"
+}
