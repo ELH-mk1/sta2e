@@ -51,5 +51,5 @@
 	"secondaryTokenAttribute": "determination",
 	"url": "https://github.com/ELH-mk1/sta2e",
 	"manifest": "https://raw.githubusercontent.com/ELH-mk1/sta2e/main/src/system.json",
-	"download": "https://raw.githubusercontent.com/ELH-mk1/sta2e/raw/main/package/sta2e-BETA-1.0.0.zip"
+	"download": "https://github.com/ELH-mk1/sta2e/raw/main/package/sta2e-BETA-1.0.0.zip"
 }
