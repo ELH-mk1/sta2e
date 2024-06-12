@@ -50,6 +50,6 @@
 	"primaryTokenAttribute": "stress",
 	"secondaryTokenAttribute": "determination",
 	"url": "https://github.com/ELH-mk1/sta2e",
-	"manifest": "https://raw.githubusercontent.com/ELH-mk1/sta2e/main/src/system.json",
-	"download": "https://github.com/ELH-mk1/sta2e/raw/main/package/sta2e-BETA-1.0.0.zip"
+	"manifest": "https://raw.githubusercontent.com/ELH-mk1/sta2e/master/src/system.json",
+	"download": "https://github.com/ELH-mk1/sta2e/raw/master/package/sta2e-BETA-1.0.0.zip"
 }
