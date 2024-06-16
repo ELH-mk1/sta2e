@@ -73,13 +73,19 @@
               <input class="field numeric-entry" id="{{key}}.breaches" name="system.systems.{{key}}.breaches" type="number" value="{{system.breaches}}" />
             </div>
             {{/each}}
-            <div class="check-button btn2 challenge">{{localize 'sta.actor.challenge.roll'}}</div>
+            <!-- <div class="check-button btn2 challenge">{{localize 'sta.actor.challenge.roll'}}</div> -->
           </div>
           <div class="section scale">
             <div class="title">
               {{localize 'sta.actor.starship.scale'}}:
             </div>
             <input class="field numeric-entry" name="system.scale" id="scale" type="number" value="{{system.scale}}" />
+          </div>
+          <div class="section resistance">
+            <div class="title">
+              {{localize 'sta.actor.starship.resistance'}}:
+            </div>
+            <input class="field numeric-entry" name="system.resistance" id="resistance" type="number" value="{{system.resistance}}" />
           </div>
         </div>
         <div class="column center-column">
@@ -130,10 +136,16 @@
         </div>
         <div class="section resistance">
           <div class="title">
+                {{localize 'sta.actor.starship.smod'}}:
+          </div>
+          <input class="field numeric-entry" name="system.smod" id="smod" type="number" value="{{system.smod}}" />
+        </div>
+        <!-- <div class="section resistance">
+          <div class="title">
             {{localize 'sta.actor.starship.resistance'}}:
           </div>
           <input class="field numeric-entry" name="system.resistance" id="resistance" type="number" value="{{system.resistance}}" />
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="row">

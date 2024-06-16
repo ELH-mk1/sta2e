@@ -162,7 +162,7 @@
   "sta.roll.effectPlural": "Das sind |#| Effekte!",
   "sta.roll.rerollresults": "Neurollen?",
 
-  "sta.roll.weapon.damage": "<b>|#|</b> Schaden Würfel",
+  "sta.roll.weapon.damage": "<b>|#|</b> TYPE Schaden Würfel",
   "sta.roll.weapon.damagePlural": "<b>|#|</b> Schaden Würfel",
   "sta.roll.armor.protect": "<b>|#|</b> Widerstand",
   "sta.roll.item.quantity": "|#|x Ausrüstungen",

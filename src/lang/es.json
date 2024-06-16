@@ -171,7 +171,7 @@
   "sta.roll.effectPlural": "¡Consigues |#| Efectos!",
   "sta.roll.rerollresults": "¿Repetir la tirada?",
 
-  "sta.roll.weapon.damage": "<b>|#|</b> Daño dado",
+  "sta.roll.weapon.damage": "<b>|#|</b> TYPE Daño dado",
   "sta.roll.weapon.damagePlural": "<b>|#|</b> Daño dadoes",
   "sta.roll.armor.protect": "<b>|#|</b> Resistencia",
   "sta.roll.item.quantity": "|#|x Objetos",

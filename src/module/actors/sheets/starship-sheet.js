@@ -465,7 +465,9 @@ export class STAStarshipSheet extends ActorSheet {
       const securityValue = parseInt(html.find('#security')[0].value);
       let scaleDamage = 0;
       if (value.dataset.itemIncludescale == "true") scaleDamage = parseInt(html.find('#scale')[0].value);
-      const attackDamageValue = weaponDamage + securityValue + scaleDamage;
+      // 2E is static damage!
+      const attackDamageValue = weaponDamage;
+      //const attackDamageValue = weaponDamage + securityValue + scaleDamage;
       value.getElementsByClassName('damage')[0].innerText = attackDamageValue;
     });
   }

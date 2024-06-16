@@ -1,17 +1,18 @@
 {
 	"id": "sta2e",
-	"title": "Star Trek Adventures Roleplaying Game (2nd Edition)",
-	"description": "An unofficial rendition of the Modiphius tabletop role playing game system.",
+	"title": "Star Trek Adventures (2nd Edition)",
+	"description": "An -UNOFFICIAL- rendition of the Modiphius TTRPG System.",
 	"version": "1.0.0",
 	"compatibility": {
-		"verified": "12"
+		"minimum": "10",
+        "verified": "12"
 	},
 	"templateVersion": 1,
 	"authors": [
 		{
 			"name": "ELH",
 			"discord": "elhmk1",
-			"flags": {}
+			"url": "https://github.com/ELH-mk1"
 		}
 	],
 	"esmodules": ["module/sta.js"],
@@ -50,6 +51,7 @@
 	"primaryTokenAttribute": "stress",
 	"secondaryTokenAttribute": "determination",
 	"url": "https://github.com/ELH-mk1/sta2e",
+    "background": "systems/sta2e/assets/splash.webp",
 	"manifest": "https://raw.githubusercontent.com/ELH-mk1/sta2e/master/src/system.json",
 	"download": "https://raw.githubusercontent.com/ELH-mk1/sta2e/master/package/sta2e-BETA-1.0.0.zip"
 }

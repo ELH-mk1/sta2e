@@ -171,7 +171,7 @@
     "sta.roll.effectPlural": "Il y a eu |#| Effets !",
     "sta.roll.rerollresults": "Relancer les résultats ?",
 
-    "sta.roll.weapon.damage": "<b>|#|</b> Dégât",
+    "sta.roll.weapon.damage": "<b>|#|</b> TYPE Dégât",
     "sta.roll.weapon.damagePlural": "<b>|#|</b> Dégâts",
     "sta.roll.armor.protect": "<b>|#|</b> Résistance",
     "sta.roll.item.quantity": "|#|x Objets",

@@ -170,7 +170,7 @@
   "sta.roll.effectPlural": "Tivemos |#| efeitos!",
   "sta.roll.rerollresults": "Re-rolar resultados?",
 
-  "sta.roll.weapon.damage": "<b>|#|</b> Dano",
+  "sta.roll.weapon.damage": "<b>|#|</b> TYPE Dano",
   "sta.roll.armor.protect": "<b>|#|</b> Resistência",
   "sta.roll.item.quantity": "|#|x Itens",
 

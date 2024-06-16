@@ -337,6 +337,7 @@ export class STARoll {
     // Create dynamic tags div and populate it with localisation to use in the HTML.
     let tags = '';
     
+    // Ground Tags
     if (item.system.qualities.melee) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.melee')+'</div>';
     if (item.system.qualities.ranged) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.ranged')+'</div>';
     if (item.system.qualities.accurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.accurate')+'</div>';
@@ -349,17 +350,32 @@ export class STARoll {
     if (item.system.qualities.hiddenx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.hiddenx') + ' ' + item.system.qualities.hiddenx +'</div>';
     if (item.system.qualities.intense) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.intense')+'</div>';
     if (item.system.qualities.piercingx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx')+'</div>';
-    if (item.system.qualities.deadly) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.deadly')+'</div>';
-    if (item.system.qualities.stun) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.stun')+'</div>';
+    
+    // Space tags
+    if (item.system.qualities.calibration) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.calibration')+'</div>';
+    if (item.system.qualities.dampening) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.dampening')+'</div>';
+    if (item.system.qualities.devastating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.devastating')+'</div>';
+    if (item.system.qualities.highyield) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.highyield')+'</div>';
+    if (item.system.qualities.spread) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.spread')+'</div>';
+    if (item.system.qualities.versatilex > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.versatilex') + ' ' + item.system.qualities.versatilex +'</div>';
+    
+    //if (item.system.qualities.deadly) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.deadly')+'</div>';
+    //if (item.system.qualities.stun) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.stun')+'</div>';
 
     // Create variable div and populate it with localisation to use in the HTML.
-    const calculatedDamage = item.system.damage
+    const calculatedDamage = item.system.damage;
     const variablePrompt = game.i18n.format('sta.roll.weapon.damage');
-    const variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', item.system.damage)+`</div>`;
+    
+    let variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', item.system.damage)+`</div>`;
+    let variable2 = '';
+    
+    if (item.system.qualities.stun) variable2 = variable.replace(/TYPE/gi, game.i18n.format('sta.actor.belonging.weapon.stun'));
+    else if (item.system.qualities.deadly) variable2 = variable.replace(/TYPE/gi, game.i18n.format('sta.actor.belonging.weapon.deadly'));
+    else variable2 = variable.replace(/TYPE/gi, "");
     
     // Send the divs to populate a HTML template and sends to chat.
     this.genericItemTemplate(item.img, item.name,
-      item.system.description, variable, tags)
+      item.system.description, variable2, tags)
       .then((html)=>this.sendToChat(speaker, html));
   }
   

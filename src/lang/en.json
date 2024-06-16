@@ -171,7 +171,7 @@
   "sta.roll.effectPlural": "There were |#| effects!",
   "sta.roll.rerollresults": "Reroll results?",
 
-  "sta.roll.weapon.damage": "<b>|#|</b> Damage",
+  "sta.roll.weapon.damage": "<b>|#|</b> TYPE Damage",
   "sta.roll.weapon.damagePlural": "<b>|#|</b> Damage dice",
   "sta.roll.armor.protect": "<b>|#|</b> Resistance",
   "sta.roll.item.quantity": "|#|x Items",

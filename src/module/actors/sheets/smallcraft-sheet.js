@@ -64,6 +64,10 @@ export class STASmallCraftSheet extends ActorSheet {
       sheetData.system.power.value = 0;
     }
 
+    //Shield Mod check
+    if (!(sheetData.system.smod))
+      sheetData.system.smod = 0;
+  
     return sheetData;
   }
 
@@ -92,7 +96,7 @@ export class STASmallCraftSheet extends ActorSheet {
     // This creates a dynamic Shields tracker. It polls for the value of the structure system and security department. 
     // With the total value divided by 2, creates a new div for each and places it under a child called "bar-shields-renderer".
     function shieldsTrackUpdate() {
-      shieldsTrackMax = Math.floor((parseInt(html.find('#structure')[0].value) + parseInt(html.find('#security')[0].value))/2);
+      shieldsTrackMax = Math.floor((parseInt(html.find('#structure')[0].value) + parseInt(html.find('#security')[0].value))/2) + parseInt(html.find('#smod')[0].value);
       if (html.find('[data-talent-name="Advanced Shields"]').length > 0) {
         shieldsTrackMax += 5;
       }
@@ -115,10 +119,12 @@ export class STASmallCraftSheet extends ActorSheet {
     // This creates a dynamic Power tracker. It polls for the value of the engines system. 
     // With the value, creates a new div for each and places it under a child called "bar-power-renderer".
     function powerTrackUpdate() {
-      powerTrackMax = Math.ceil(parseInt(html.find('#engines')[0].value)/2);
+      /* powerTrackMax = Math.ceil(parseInt(html.find('#engines')[0].value)/2);
       if (html.find('[data-talent-name="Secondary Reactors"]').length > 0) {
         powerTrackMax += 5;
-      }
+      } */
+      // 2E Only has one Reserve Power atm!
+      powerTrackMax = 1;
       // This checks that the max-power hidden field is equal to the calculated Max Power value, if not it makes it so.
       if (html.find('#max-power')[0].value != powerTrackMax) {
         html.find('#max-power')[0].value = powerTrackMax;
