@@ -6,6 +6,8 @@ An ***UNOFFICIAL*** implementation of Star Trek Adventures Roleplaying Game (2nd
 - [FabulistVtt](https://github.com/FabulistVtt/sta-lcars-ui) for the fancy LCARS CSS module for STA & Foundry VTT
 - Modiphius for creating Star Trek Adventures
 
+![A screenshot showing what the STA2E system looks like](https://github.com/ELH-mk1/sta2e/blob/main/STA2E-Foundry.jpg?raw=true)
+
 ## FAQ
 
 **Is this System out yet?**
