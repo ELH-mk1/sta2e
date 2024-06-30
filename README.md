@@ -10,6 +10,9 @@ An ***UNOFFICIAL*** implementation of Star Trek Adventures Roleplaying Game (2nd
 
 ## FAQ
 
+**How do I install this?**
+[Use this link](https://raw.githubusercontent.com/ELH-mk1/sta2e/master/src/system.json) when inputing the Manifest URL at the bottom of the *Install System* window in Foundry
+
 **Is this System out yet?**
 - STA 2E is still in the Pre-Order phase, so I don't have full access to the full rules yet. That means this package/implementation is still very much in the WIP phase!
 
