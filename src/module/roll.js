@@ -1,7 +1,7 @@
 export class STARoll {
   async performAttributeTest(dicePool, usingFocus, usingDetermination,
     selectedAttribute, selectedAttributeValue, selectedDiscipline,
-    selectedDisciplineValue, complicationRange, speaker) {
+    selectedDisciplineValue, complicationRange, usingDFocus, speaker) {
     // Define some variables that we will be using later.
     
     let i;
@@ -369,8 +369,8 @@ export class STARoll {
     let variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', item.system.damage)+`</div>`;
     let variable2 = '';
     
-    if (item.system.qualities.stun) variable2 = variable.replace(/TYPE/gi, game.i18n.format('sta.actor.belonging.weapon.stun'));
-    else if (item.system.qualities.deadly) variable2 = variable.replace(/TYPE/gi, game.i18n.format('sta.actor.belonging.weapon.deadly'));
+    if (item.system.qualities.stun) variable2 = variable.replace(/TYPE.*/gi, game.i18n.format('sta.actor.belonging.weapon.stun'));
+    else if (item.system.qualities.deadly) variable2 = variable.replace(/TYPE.*/gi, game.i18n.format('sta.actor.belonging.weapon.deadly'));
     else variable2 = variable.replace(/TYPE/gi, "");
     
     // Send the divs to populate a HTML template and sends to chat.

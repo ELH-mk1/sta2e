@@ -4,6 +4,12 @@
     "sta.counting.three": "3",
     "sta.counting.four": "4",
     "sta.counting.five": "5",
+    
+    "sta.counting.sixteen": "16",
+    "sta.counting.seventeen": "17",
+    "sta.counting.eighteen": "18",
+    "sta.counting.nineteen": "19",
+    "sta.counting.twenty": "20",
 
     "sta.actor.character.reputation": "Suivi de Réputation",
     "sta.actor.character.name": "Nom",
@@ -154,7 +160,7 @@
     "sta.apps.dicepoolwindow": "Réserve de Dés",
     "sta.apps.focus": "Utilisation d'une spécialité ?",
     "sta.apps.determination": "Utiliser de la Détermination ?",
-    "sta.apps.complicationrange": "Plage de Complication (1 par défaut) ?",
+    "sta.apps.complicationrange": "Plage de Complication",
     "sta.apps.pool": "Nombre de Dés en réserve",
     "sta.apps.rolldice": "Lancer les Dés",
     "sta.apps.Dfocus": "Spécialité dédiée ?",

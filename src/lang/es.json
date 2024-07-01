@@ -4,6 +4,12 @@
   "sta.counting.three": "3",
   "sta.counting.four": "4",
   "sta.counting.five": "5",
+  
+  "sta.counting.sixteen": "16",
+  "sta.counting.seventeen": "17",
+  "sta.counting.eighteen": "18",
+  "sta.counting.nineteen": "19",
+  "sta.counting.twenty": "20",
 
   "sta.actor.character.reputation": "Indicador de Reputación",
   "sta.actor.character.name": "Nombre",
@@ -154,7 +160,7 @@
   "sta.apps.dicepoolwindow": "Reserva de dados",
   "sta.apps.focus": "¿Usar Especialidad?",
   "sta.apps.determination": "¿Usar Determinación/Valor?",
-  "sta.apps.complicationrange": "Margen de Complicación (1 por defecto)?",
+  "sta.apps.complicationrange": "Margen de Complicación",
   "sta.apps.pool": "Número de dados en la reserva",
   "sta.apps.rolldice": "Tirar los dados",
   "sta.apps.Dfocus": "¿Especialidad dedicada?",

@@ -2,7 +2,7 @@
 	"id": "sta2e",
 	"title": "Star Trek Adventures (2nd Edition)",
 	"description": "An -UNOFFICIAL- rendition of the Modiphius TTRPG System.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"compatibility": {
 		"minimum": "10",
         "verified": "12"
@@ -53,5 +53,5 @@
 	"url": "https://github.com/ELH-mk1/sta2e",
     "background": "systems/sta2e/assets/splash.webp",
 	"manifest": "https://raw.githubusercontent.com/ELH-mk1/sta2e/master/src/system.json",
-	"download": "https://raw.githubusercontent.com/ELH-mk1/sta2e/master/package/sta2e-BETA-1.0.0.zip"
+	"download": "https://raw.githubusercontent.com/ELH-mk1/sta2e/master/package/sta2e-BETA-1.0.1.zip"
 }

@@ -4,6 +4,12 @@
   "sta.counting.three": "3",
   "sta.counting.four": "4",
   "sta.counting.five": "5",
+  
+  "sta.counting.sixteen": "16",
+  "sta.counting.seventeen": "17",
+  "sta.counting.eighteen": "18",
+  "sta.counting.nineteen": "19",
+  "sta.counting.twenty": "20",
 
   "sta.actor.character.reputation": "Ansehen",
   "sta.actor.character.name": "Name",
@@ -145,7 +151,7 @@
   "sta.apps.dicepoolwindow": "Würfel Pool",
   "sta.apps.focus": "Fokus benutzen?",
   "sta.apps.determination": "Bestimmung oder Überzeugung?",
-  "sta.apps.complicationrange": "Komplikationsspanne (1 ist normal)?",
+  "sta.apps.complicationrange": "Komplikationsspanne",
   "sta.apps.pool": "Nummer der Würfel im Pool",
   "sta.apps.rolldice": "Würfeln",
   "sta.apps.Dfocus": "Engagierter Fokus?",

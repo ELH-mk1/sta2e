@@ -5,6 +5,12 @@
   "sta.counting.four": "4",
   "sta.counting.five": "5",
 
+  "sta.counting.sixteen": "16",
+  "sta.counting.seventeen": "17",
+  "sta.counting.eighteen": "18",
+  "sta.counting.nineteen": "19",
+  "sta.counting.twenty": "20",
+
   "sta.actor.character.reputation": "Total de Reputação",
   "sta.actor.character.name": "Nome",
   "sta.actor.character.rank": "Patente",
@@ -154,7 +160,7 @@
   "sta.apps.dicepoolwindow": "Pilha de Dados",
   "sta.apps.focus": "Usando Foco?",
   "sta.apps.determination": "Usando Determinação/Valor?",
-  "sta.apps.complicationrange": "Margem de Complicações (1 é o padrão)?",
+  "sta.apps.complicationrange": "Margem de Complicações",
   "sta.apps.pool": "Número de Dados na Pilha",
   "sta.apps.rolldice": "Rolar Dados",
   "sta.apps.Dfocus": "Foco dedicado?",

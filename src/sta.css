@@ -699,19 +699,20 @@
       width: 0px;
       display: none; }
   .sta.tracker-container.hide {
-    bottom: -190px;
+    bottom: -100px;
+    /* bottom: -190px; */
     -webkit-transition: bottom 0.5s linear;
     -moz-transition: bottom 0.5s linear;
     -ms-transition: bottom 0.5s linear;
     -o-transition: bottom 0.5s linear;
-    transition: bottom 0.5s linear; }
+    transition: bottom 0.5s linear;} 
   .sta.tracker-container.tracker-collapsed {
     right: 0px;
     -webkit-transition: right 0.5s linear;
     -moz-transition: right 0.5s linear;
     -ms-transition: right 0.5s linear;
     -o-transition: right 0.5s linear;
-    transition: right 0.5s linear; }
+    transition: right 0.5s linear;}
   .sta.tracker-container .tracker {
     position: absolute;
     display: block;

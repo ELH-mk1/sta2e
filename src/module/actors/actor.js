@@ -109,13 +109,14 @@ export class STASharedActorFunctions {
     if (rolldialog) {
       const dicePool = rolldialog.get('dicePoolSlider');
       const usingFocus = rolldialog.get('usingFocus') == null ? false : true;
+      const usingDFocus = rolldialog.get('usingDFocus') == null ? false : true;
       const usingDetermination = rolldialog.get('usingDetermination') == null ? false : true;
       const complicationRange = parseInt(rolldialog.get('complicationRange'));
       // Once the response has been collected it then sends it to be rolled.
       const staRoll = new STARoll();
       staRoll.performAttributeTest(dicePool, usingFocus, usingDetermination,
         selectedAttribute, selectedAttributeValue, selectedDiscipline,
-        selectedDisciplineValue, complicationRange, speaker);
+        selectedDisciplineValue, complicationRange, usingDFocus, speaker);
     }
   }
 	
