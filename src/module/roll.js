@@ -15,7 +15,7 @@ export class STARoll {
     const dedicatedDisciplineValue = parseInt(selectedDisciplineValue) + parseInt(selectedDisciplineValue);
 
     // Foundry will soon make rolling async only, setting it up as such now avoids a warning. 
-    const r = await new Roll( dicePool + 'd20' ).evaluate( {async: true});
+    const r = await new Roll( dicePool + 'd20' ).evaluate( {});
     
     // Now for each dice in the dice pool we want to check what the individual result was.
     for (i = 0; i < dicePool; i++) {
@@ -135,7 +135,7 @@ export class STARoll {
   
   async performChallengeRoll(dicePool, challengeName, speaker) {
     // Foundry will soon make rolling async only, setting it up as such now avoids a warning. 
-    const rolledChallenge = await new Roll( dicePool + 'd6' ).evaluate( {async: true});
+    const rolledChallenge = await new Roll( dicePool + 'd6' ).evaluate( {});
 
     const flavor = challengeName + ' ' + game.i18n.format('sta.roll.challenge.name');
     const successes = getSuccessesChallengeRoll( rolledChallenge );
@@ -265,10 +265,11 @@ export class STARoll {
     if (item.system.qualities.nonlethal) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.nonlethal')+'</div>';
 
     if (item.system.qualities.hiddenx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.hiddenx') + ' ' + item.system.qualities.hiddenx +'</div>';
-    if (item.system.qualities.piercingx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx') + ' ' + item.system.qualities.piercingx +'</div>';
+    if (item.system.qualities.piercingx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx')+'</div>';
+    /* if (item.system.qualities.piercingx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx') + ' ' + item.system.qualities.piercingx +'</div>'; */
     if (item.system.qualities.viciousx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.viciousx') + ' ' + item.system.qualities.viciousx +'</div>';
 
-    const damageRoll = await new Roll( calculatedDamage + 'd6' ).evaluate( {async: true});
+    const damageRoll = await new Roll( calculatedDamage + 'd6' ).evaluate( {});
     const successes = getSuccessesChallengeRoll( damageRoll );
     const effects = getEffectsFromChallengeRoll( damageRoll );
     const diceString = getDiceImageListFromChallengeRoll( damageRoll );
@@ -340,22 +341,30 @@ export class STARoll {
     // Ground Tags
     if (item.system.qualities.melee) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.melee')+'</div>';
     if (item.system.qualities.ranged) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.ranged')+'</div>';
+    // Space tags
+    if (item.system.range == "close") tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.close')+'</div>';
+    if (item.system.range == "medium") tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.medium')+'</div>';
+    if (item.system.range == "long") tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.long')+'</div>';
+    
     if (item.system.qualities.accurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.accurate')+'</div>';
-    if (item.system.qualities.inaccurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.inaccurate')+'</div>';
+    
     if (item.system.qualities.area) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.area')+'</div>';
+    if (item.system.qualities.calibration) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.calibration')+'</div>';
     if (item.system.qualities.charge) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.charge')+'</div>';
     if (item.system.qualities.cumbersome) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.cumbersome')+'</div>';
+    if (item.system.qualities.dampening) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.dampening')+'</div>';
     if (item.system.qualities.debilitating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.debilitating')+'</div>';
+    if (item.system.qualities.depleting) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.depleting')+'</div>';
+    if (item.system.qualities.devastating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.devastating')+'</div>';
     if (item.system.qualities.grenade) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.grenade')+'</div>';
     if (item.system.qualities.hiddenx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.hiddenx') + ' ' + item.system.qualities.hiddenx +'</div>';
-    if (item.system.qualities.intense) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.intense')+'</div>';
-    if (item.system.qualities.piercingx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx')+'</div>';
-    
-    // Space tags
-    if (item.system.qualities.calibration) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.calibration')+'</div>';
-    if (item.system.qualities.dampening) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.dampening')+'</div>';
-    if (item.system.qualities.devastating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.devastating')+'</div>';
     if (item.system.qualities.highyield) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.highyield')+'</div>';
+    if (item.system.qualities.inaccurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.inaccurate')+'</div>';
+    if (item.system.qualities.intense) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.intense')+'</div>';
+    if (item.system.qualities.jamming) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.jamming')+'</div>';
+    if (item.system.qualities.persistentx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.persistentx')+'</div>';
+    if (item.system.qualities.piercingx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx')+'</div>';
+    if (item.system.qualities.slowing) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.slowing')+'</div>';
     if (item.system.qualities.spread) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.spread')+'</div>';
     if (item.system.qualities.versatilex > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.versatilex') + ' ' + item.system.qualities.versatilex +'</div>';
     

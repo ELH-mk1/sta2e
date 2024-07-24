@@ -68,6 +68,7 @@
   "sta.actor.belonging.weapon.cumbersome": "Cumbersome",
   "sta.actor.belonging.weapon.deadly": "Deadly",
   "sta.actor.belonging.weapon.debilitating": "Debilitating",
+  "sta.actor.belonging.weapon.depleting": "Depleting",
   "sta.actor.belonging.weapon.grenade": "Grenade",
   "sta.actor.belonging.weapon.inaccurate": "Inaccurate",
   "sta.actor.belonging.weapon.stun": "Stun",
@@ -81,6 +82,8 @@
   "sta.actor.belonging.weapon.viciousx": "Vicious",
   "sta.actor.belonging.weapon.versatilex": "Versatile",
   "sta.actor.belonging.weapon.persistentx": "Persistent",
+  "sta.actor.belonging.weapon.slowing": "Slowing",
+  "sta.actor.belonging.weapon.jamming": "Jamming",
   "sta.actor.belonging.weapon.hands": "Hands",
   "sta.actor.belonging.weapon.qualities": "Qualities",
   "sta.actor.belonging.armor.title": "Armor",
@@ -89,6 +92,7 @@
   "sta.actor.belonging.other.title": "Other Items",
   "sta.actor.belonging.other.qty": "Qty",
   "sta.actor.belonging.other.quantity": "Quantity",
+  "sta.actor.pastime": "Pastime",
   
   "sta.actor.starship.name": "Name",
   "sta.actor.starship.designation": "Designation",
@@ -130,7 +134,7 @@
   "sta.actor.smallcraft.child": "Small Craft Type",
 
   "sta.actor.extendedtask.magnitude": "Magnitude",
-  "sta.actor.extendedtask.work": "Work",
+  "sta.actor.extendedtask.work": "Progress Track",
   "sta.actor.extendedtask.difficulty": "Difficulty",
   "sta.actor.extendedtask.resistance": "Resistance",
   "sta.actor.extendedtask.breakthroughs": "Breakthroughs",

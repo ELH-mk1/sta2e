@@ -3,7 +3,7 @@ import {STASharedActorFunctions} from '../actor.js';
 export class STACharacterSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['sta', 'sheet', 'actor', 'character'],
       width: 850,
       height: 910,
@@ -21,7 +21,7 @@ export class STACharacterSheet extends ActorSheet {
   get template() {
     let versionInfo = game.world.coreVersion;
     if ( !game.user.isGM && this.actor.limited) return 'systems/sta2e/templates/actors/limited-sheet.html';
-    if (!isNewerVersion(versionInfo,"0.8.-1")) return "systems/sta2e/templates/actors/character-sheet-legacy.html";
+    if (!foundry.utils.isNewerVersion(versionInfo,"0.8.-1")) return "systems/sta2e/templates/actors/character-sheet-legacy.html";
     return `systems/sta2e/templates/actors/character-sheet.html`;
   }
 
@@ -154,6 +154,9 @@ export class STACharacterSheet extends ActorSheet {
       if (html.find('[data-talent-name="Tough"]').length > 0) {
         stressTrackMax += 2;
       }
+      if (html.find('[data-talent-name="Resolute"]').length > 0) {
+        stressTrackMax += parseInt(html.find('#command')[0].value);
+      }
       
       // Manual Adjustment
       stressTrackMax += parseInt(html.find('#stmod')[0].value)
@@ -269,7 +272,7 @@ export class STACharacterSheet extends ActorSheet {
       ev.preventDefault();
       const header = ev.currentTarget;
       const type = header.dataset.type;
-      const data = duplicate(header.dataset);
+      const data = foundry.utils.duplicate(header.dataset);
       const name = `New ${type.capitalize()}`;
       if (type == 'armor' && armorNumber >= 1) {
         ui.notifications.info('The current actor has an equipped armor already. Adding unequipped.');
@@ -282,7 +285,7 @@ export class STACharacterSheet extends ActorSheet {
         img: game.sta2e.defaultImage
       };
       delete itemData.data['type'];
-      if (isNewerVersion(versionInfo, '0.8.-1')) {
+      if (foundry.utils.isNewerVersion(versionInfo, '0.8.-1')) {
         return this.actor.createEmbeddedDocuments('Item', [(itemData)]);
       } else {
         return this.actor.createOwnedItem(itemData);
@@ -295,7 +298,7 @@ export class STACharacterSheet extends ActorSheet {
       this.activeDialog = staActor.deleteConfirmDialog(
         li[0].getAttribute('data-item-value'),
         () => {
-          if ( isNewerVersion( versionInfo, '0.8.-1' )) {
+          if ( foundry.utils.isNewerVersion( versionInfo, '0.8.-1' )) {
             this.actor.deleteEmbeddedDocuments( 'Item', [li.data('itemId')] );
           } else {
             this.actor.deleteOwnedItem( li.data( 'itemId' ));

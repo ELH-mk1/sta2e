@@ -66,6 +66,7 @@
   "sta.actor.belonging.weapon.cumbersome": "Unhandlich",
   "sta.actor.belonging.weapon.deadly": "Letal",
   "sta.actor.belonging.weapon.debilitating": "Verletzend",
+  "sta.actor.belonging.weapon.depleting": "Abnehmender",
   "sta.actor.belonging.weapon.grenade": "Granate",
   "sta.actor.belonging.weapon.inaccurate": "Ungenau",
   "sta.actor.belonging.weapon.stun": "Betäuben",
@@ -79,6 +80,8 @@
   "sta.actor.belonging.weapon.viciousx": "Verheerend",
   "sta.actor.belonging.weapon.versatilex": "Vielseitig",
   "sta.actor.belonging.weapon.persistentx": "Anhaltend",
+  "sta.actor.belonging.weapon.slowing": "Verlangsamen",
+  "sta.actor.belonging.weapon.jamming": "Elektronische Störmaßnahmen",
   "sta.actor.belonging.weapon.qualities": "Qualitäten",
   "sta.actor.belonging.weapon.hands": "Hände",
   "sta.actor.belonging.armor.title": "Rüstung",
@@ -87,6 +90,7 @@
   "sta.actor.belonging.other.title": "Sonstige Ausrüstung",
   "sta.actor.belonging.other.qty": "Anzahl",
   "sta.actor.belonging.other.quantity": "Anzahl",
+  "sta.actor.pasttime": "Zeitvertreib",
     
   "sta.actor.starship.name": "Name",
   "sta.actor.starship.designation": "Registriernummer",
@@ -131,7 +135,7 @@
 
   "sta.actor.extendedtask.title": "Erweiterte Aufgaben",
   "sta.actor.extendedtask.magnitude": "Größenordnung",
-  "sta.actor.extendedtask.work": "Arbeitsleistung",
+  "sta.actor.extendedtask.work": "Fortschritt Verfolgen",
   "sta.actor.extendedtask.difficulty": "Schwierigkeit",
   "sta.actor.extendedtask.resistance": "Wiederstand",
   "sta.actor.extendedtask.breakthroughs": "Durchbruch",

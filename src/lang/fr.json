@@ -66,6 +66,9 @@
     "sta.actor.belonging.weapon.cumbersome": "Encombrant",
     "sta.actor.belonging.weapon.deadly": "Létal",
     "sta.actor.belonging.weapon.debilitating": "Invalidant",
+    "sta.actor.belonging.weapon.depleting": "Appauvrissant",
+    "sta.actor.belonging.weapon.slowing": "Fléchissement",
+    "sta.actor.belonging.weapon.jamming": "Brouillage",
     "sta.actor.belonging.weapon.grenade": "Grenade",
     "sta.actor.belonging.weapon.inaccurate": "Imprécis",
     "sta.actor.belonging.weapon.stun": "Étourdir",
@@ -87,6 +90,7 @@
     "sta.actor.belonging.other.title": "Autres",
     "sta.actor.belonging.other.qty": "Qté",
     "sta.actor.belonging.other.quantity": "Quantité",
+    "sta.actor.pastime": "Passe-temps",
 
     "sta.actor.starship.name": "Nom",
     "sta.actor.starship.designation": "Désignation",
@@ -130,7 +134,7 @@
     "sta.actor.smallcraft.child": "Type de vaisseau Enfant",
 
     "sta.actor.extendedtask.magnitude": "Ampleur",
-    "sta.actor.extendedtask.work": "Effort",
+    "sta.actor.extendedtask.work": "Suivi des Progrès",
     "sta.actor.extendedtask.difficulty": "Difficulté",
     "sta.actor.extendedtask.resistance": "Résistance",
     "sta.actor.extendedtask.breakthroughs": "Progrès",

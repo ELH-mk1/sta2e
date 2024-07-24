@@ -37,18 +37,6 @@ export function register_dsn_ufp_themes(dice3d) {
 
   dice3d.addSystem({ id: "sta-black", name: "Star Trek Adventures UFP (Black)" }, "preferred");
   dice3d.addDicePreset({
-    type: "d6",
-    labels: [
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_one_success_black.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_two_successes_black.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_no_success_black.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_no_success_black.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_effect_black.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_effect_black.png",
-    ],
-    system: "sta-black",
-  });
-  dice3d.addDicePreset({
     type: "d20",
     labels: [
       "systems/sta2e/assets/icons/dice-so-nice/d20_critical_black.png",
@@ -59,18 +47,6 @@ export function register_dsn_ufp_themes(dice3d) {
   });
 
   dice3d.addSystem({ id: "sta-white", name: "Star Trek Adventures UFP (White)" }, "default");
-  dice3d.addDicePreset({
-    type: "d6",
-    labels: [
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_one_success_white.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_two_successes_white.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_no_success_white.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_no_success_white.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_effect_white.png",
-      "systems/sta2e/assets/icons/dice-so-nice/challenge_die_effect_white.png",
-    ],
-    system: "sta-white",
-  });
   dice3d.addDicePreset({
     type: "d20",
     labels: [

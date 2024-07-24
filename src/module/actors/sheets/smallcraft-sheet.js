@@ -5,7 +5,7 @@ import {
 export class STASmallCraftSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['sta', 'sheet', 'actor', 'smallcraft'],
       width: 900,
       height: 735,
@@ -22,7 +22,7 @@ export class STASmallCraftSheet extends ActorSheet {
   get template() {
     let versionInfo = game.world.coreVersion;
     if ( !game.user.isGM && this.actor.limited) return 'systems/sta2e/templates/actors/limited-sheet.html';
-    if (!isNewerVersion(versionInfo,"0.8.-1")) return "systems/sta2e/templates/actors/smallcraft-sheet-legacy.html";
+    if (!foundry.utils.isNewerVersion(versionInfo,"0.8.-1")) return "systems/sta2e/templates/actors/smallcraft-sheet-legacy.html";
     return `systems/sta2e/templates/actors/smallcraft-sheet.html`;
   }
     
@@ -96,7 +96,7 @@ export class STASmallCraftSheet extends ActorSheet {
     // This creates a dynamic Shields tracker. It polls for the value of the structure system and security department. 
     // With the total value divided by 2, creates a new div for each and places it under a child called "bar-shields-renderer".
     function shieldsTrackUpdate() {
-      shieldsTrackMax = Math.floor((parseInt(html.find('#structure')[0].value) + parseInt(html.find('#security')[0].value))/2) + parseInt(html.find('#smod')[0].value);
+      shieldsTrackMax = Math.floor((parseInt(html.find('#structure')[0].value) + parseInt(html.find('#security')[0].value))/2) + parseInt(html.find('#scale')[0].value) + parseInt(html.find('#smod')[0].value);
       if (html.find('[data-talent-name="Advanced Shields"]').length > 0) {
         shieldsTrackMax += 5;
       }
@@ -191,7 +191,7 @@ export class STASmallCraftSheet extends ActorSheet {
       ev.preventDefault();
       const header = ev.currentTarget;
       const type = header.dataset.type;
-      const data = duplicate(header.dataset);
+      const data = foundry.utils.duplicate(header.dataset);
       const name = `New ${type.capitalize()}`;
       const itemData = {
         name: name,
@@ -200,7 +200,7 @@ export class STASmallCraftSheet extends ActorSheet {
         img: game.sta2e.defaultImage
       };
       delete itemData.data['type'];
-      if ( isNewerVersion( versionInfo, '0.8.-1' )) {
+      if ( foundry.utils.isNewerVersion( versionInfo, '0.8.-1' )) {
         return this.actor.createEmbeddedDocuments( 'Item', [(itemData)] ); 
       } else {
         return this.actor.createOwnedItem( itemData );
@@ -216,7 +216,7 @@ export class STASmallCraftSheet extends ActorSheet {
       this.activeDialog = staActor.deleteConfirmDialog(
         li[0].getAttribute('data-item-value'),
         () => {
-          if ( isNewerVersion( versionInfo, '0.8.-1' )) {
+          if ( foundry.utils.isNewerVersion( versionInfo, '0.8.-1' )) {
             this.actor.deleteEmbeddedDocuments( 'Item', [li.data('itemId')] );
           } else {
             this.actor.deleteOwnedItem( li.data( 'itemId' ));

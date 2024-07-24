@@ -202,10 +202,10 @@ Hooks.once('init', function() {
 
   game.settings.register('sta2e', 'maxNumberOfReputation', {
     name: 'Maximum amount of Reputation:',
-    hint: 'Max number of reputation that can be given to a character. 10 is default.',
+    hint: 'Max number of reputation that can be given to a character. 5 is default.',
     scope: 'world',
     type: Number,
-    default: 20,
+    default: 5,
     config: true
   });
 

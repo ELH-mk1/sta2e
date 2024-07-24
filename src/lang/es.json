@@ -66,6 +66,9 @@
   "sta.actor.belonging.weapon.cumbersome": "Aparatosa",
   "sta.actor.belonging.weapon.deadly": "Mortífera",
   "sta.actor.belonging.weapon.debilitating": "Incapacitante",
+  "sta.actor.belonging.weapon.depleting": "Agotando",
+  "sta.actor.belonging.weapon.slowing": "Ralentización",
+  "sta.actor.belonging.weapon.jamming": "Interferencias",
   "sta.actor.belonging.weapon.grenade": "Granada",
   "sta.actor.belonging.weapon.inaccurate": "Imprecisa",
   "sta.actor.belonging.weapon.stun": "Aturdir",
@@ -87,6 +90,7 @@
   "sta.actor.belonging.other.title": "Otros objetos",
   "sta.actor.belonging.other.qty": "Ctd",
   "sta.actor.belonging.other.quantity": "Cantidad",
+  "sta.actor.pastime": "Pasatiempo",
   
   "sta.actor.starship.name": "Nombre",
   "sta.actor.starship.designation": "Designación",
@@ -130,7 +134,7 @@
   "sta.actor.smallcraft.child": "Tipo vehículo pequeño",
 
   "sta.actor.extendedtask.magnitude": "Magnitud",
-  "sta.actor.extendedtask.work": "Esfuerzo",
+  "sta.actor.extendedtask.work": "Seguimiento del Progreso",
   "sta.actor.extendedtask.difficulty": "Dificultad",
   "sta.actor.extendedtask.resistance": "Resistencia",
   "sta.actor.extendedtask.breakthroughs": "Avances",
