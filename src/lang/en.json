@@ -51,6 +51,7 @@
   "sta.actor.injury.title": "Injuries",
   "sta.actor.belonging.title": "Belongings",
   "sta.actor.belonging.weapon.includescale": "Include Scale?",
+  "sta.actor.belonging.weapon.includeweaponmod": "Include Weapons Mod?",
   "sta.actor.belonging.weapon.title": "Weapons",
   "sta.actor.belonging.weapon.dmg": "Dmg",
   "sta.actor.belonging.weapon.damage": "Damage",
@@ -145,7 +146,7 @@
   "sta.item.genericitem.opportunity": "Opportunity",
   "sta.item.genericitem.escalation": "Escalation",
 
-  "sta.item.talent.title": "Talents",
+  "sta.item.talent.title": "Talents & Special Rules",
   "sta.item.talent.type.title": "Type",
   "sta.item.talent.type.general": "General",
   "sta.item.talent.type.discipline": "Discipline",

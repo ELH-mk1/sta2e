@@ -49,6 +49,8 @@
   "sta.actor.milestone.edit": "Editar Marco",
   "sta.actor.injury.title": "Ferimentos",
   "sta.actor.belonging.title": "Pertences",
+  "sta.actor.belonging.weapon.includescale": "Incluir escala?",
+  "sta.actor.belonging.weapon.includeweaponmod": "Incluir modificação de arma?",
   "sta.actor.belonging.weapon.title": "Armas",
   "sta.actor.belonging.weapon.dmg": "Dan",
   "sta.actor.belonging.weapon.damage": "Dano",
@@ -145,7 +147,7 @@
   "sta.item.genericitem.opportunity": "Oportunidade",
   "sta.item.genericitem.escalation": "Intensificação",
 
-  "sta.item.talent.title": "Talentos",
+  "sta.item.talent.title": "Talentos e Regras Especiais",
   "sta.item.talent.type.title": "Tipo",
   "sta.item.talent.type.general": "Geral",
   "sta.item.talent.type.discipline": "Disciplina",

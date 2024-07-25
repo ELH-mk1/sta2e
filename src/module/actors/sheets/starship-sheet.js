@@ -114,6 +114,9 @@ export class STAStarshipSheet extends ActorSheet {
       if (html.find('[data-talent-name="Advanced Shields"]').length > 0) {
         shieldsTrackMax += 5;
       }
+      if (html.find('[data-talent-name="Polarized Hull Plating"]').length > 0) {
+        shieldsTrackMax = parseInt(html.find('#structure')[0].value) + parseInt(html.find('#smod')[0].value)
+      }
       // This checks that the max-shields hidden field is equal to the calculated Max Shields value, if not it makes it so.
       if (html.find('#max-shields')[0].value != shieldsTrackMax) {
         html.find('#max-shields')[0].value = shieldsTrackMax;
@@ -159,8 +162,18 @@ export class STAStarshipSheet extends ActorSheet {
     // With the value, creates a new div for each and places it under a child called "bar-crew-renderer".
     function crewTrackUpdate() {
       crewTrackMax = parseInt(html.find('#scale')[0].value);
+      if (html.find('[data-talent-name="Abundant Personnel"]').length > 0) {
+        crewTrackMax += crewTrackMax;
+      }
       if (html.find('[data-talent-name="Extensive Automation"]').length > 0) {
         crewTrackMax = Math.ceil(crewTrackMax/2);
+      }
+      if (html.find('[data-talent-name="Aging Relic"]').length > 0) {
+        crewTrackMax += 1;
+        // Abundant Personnel doubles this!
+        if (html.find('[data-talent-name="Abundant Personnel"]').length > 0) {
+            crewTrackMax += 1;
+        }
       }
       // This checks that the max-crew hidden field is equal to the calculated Max Crew Support value, if not it makes it so.
       if (html.find('#max-crew')[0].value != crewTrackMax) {
@@ -465,11 +478,18 @@ export class STAStarshipSheet extends ActorSheet {
     
     $(html).find('[id^=starship-weapon-]').each( function( _, value ) {
       const weaponDamage = parseInt(value.dataset.itemDamage);
-      const securityValue = parseInt(html.find('#security')[0].value);
+      //const securityValue = parseInt(html.find('#security')[0].value);
+      const test = parseInt(html.find('#weapons')[0].value);
+      
+      let weaponsMod = 0;
+      if (value.dataset.itemIncludeweaponmod == "true" && test > 6) weaponsMod = 1;
+      if (value.dataset.itemIncludeweaponmod == "true" && test > 8) weaponsMod = 2;
+      if (value.dataset.itemIncludeweaponmod == "true" && test > 10) weaponsMod = 3;
+      if (value.dataset.itemIncludeweaponmod == "true" && test > 12) weaponsMod = 4;
       let scaleDamage = 0;
       if (value.dataset.itemIncludescale == "true") scaleDamage = parseInt(html.find('#scale')[0].value);
       // 2E is static damage!
-      const attackDamageValue = weaponDamage;
+      const attackDamageValue = weaponDamage + scaleDamage + weaponsMod;
       //const attackDamageValue = weaponDamage + securityValue + scaleDamage;
       value.getElementsByClassName('damage')[0].innerText = attackDamageValue;
     });

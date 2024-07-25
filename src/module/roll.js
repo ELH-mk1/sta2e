@@ -372,10 +372,19 @@ export class STARoll {
     //if (item.system.qualities.stun) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.stun')+'</div>';
 
     // Create variable div and populate it with localisation to use in the HTML.
-    const calculatedDamage = item.system.damage;
+    let weaponsMod = 0;
+    if (item.system.includeweaponmod && speaker.system.systems.weapons.value > 6) weaponsMod = 1;
+    if (item.system.includeweaponmod && speaker.system.systems.weapons.value > 8) weaponsMod = 2;
+    if (item.system.includeweaponmod && speaker.system.systems.weapons.value > 10) weaponsMod = 3;
+    if (item.system.includeweaponmod && speaker.system.systems.weapons.value > 12) weaponsMod = 4;
+
+    let scaleDamage = 0;
+	if (item.system.includescale && speaker.system.scale) scaleDamage = parseInt( speaker.system.scale );
+    
+    const calculatedDamage = item.system.damage + weaponsMod + scaleDamage;
     const variablePrompt = game.i18n.format('sta.roll.weapon.damage');
     
-    let variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', item.system.damage)+`</div>`;
+    let variable = `<div class='dice-formula'> `+variablePrompt.replace('|#|', calculatedDamage)+`</div>`;
     let variable2 = '';
     
     if (item.system.qualities.stun) variable2 = variable.replace(/TYPE.*/gi, game.i18n.format('sta.actor.belonging.weapon.stun'));

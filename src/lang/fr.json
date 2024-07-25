@@ -49,6 +49,8 @@
     "sta.actor.milestone.edit": "Éditer le Jalon",
     "sta.actor.injury.title": "Blessures",
     "sta.actor.belonging.title": "Équipements",
+    "sta.actor.belonging.weapon.includescale": "Inclure Envergure?",
+    "sta.actor.belonging.weapon.includeweaponmod": "Inclure un mod d'armement?",
     "sta.actor.belonging.weapon.title": "Armes",
     "sta.actor.belonging.weapon.dmg": "Dmg",
     "sta.actor.belonging.weapon.damage": "Dégâts",
@@ -145,7 +147,7 @@
     "sta.item.genericitem.opportunity": "Opportunité",
     "sta.item.genericitem.escalation": "Amélioration",
 
-    "sta.item.talent.title": "Talents",
+    "sta.item.talent.title": "Talents et Règles Spéciales",
     "sta.item.talent.type.title": "Type",
     "sta.item.talent.type.general": "Général",
     "sta.item.talent.type.discipline": "Discipline",

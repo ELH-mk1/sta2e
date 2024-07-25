@@ -21,9 +21,10 @@ An ***UNOFFICIAL*** implementation of Star Trek Adventures Roleplaying Game (2nd
 
 **What's different from Mike Schoen's existing system implementation?**
 - Specifically...
-  - This system *ONLY* supports STA 2E and is not designed for use in 1E games
+  - This system ***ONLY*** supports STA 2E and is not designed for use in 1E games
   - A different stylesheet based on FabulistVtt's module
   - The Complication Range input has been changed to an easy-to-understand slider
+  - Modularity with Weapon Damage rather than forcing auto-calculations
   - And more!
   
 **What's changed from the 1st Edition of STA?**
@@ -37,6 +38,9 @@ An ***UNOFFICIAL*** implementation of Star Trek Adventures Roleplaying Game (2nd
   - Weapons now display the tags selected in their item container when rolling
   - The Momentum/Threat Tracker will stop disappearing off-screen when minimized
   - And much more!
+
+**What Languages does this support?**
+- At the moment, there are language files for Spanish, German, French, and Portuguese. Most of those translations came from the original STA 1E system (see above), while any new additions were translated using DeepL.
 
 **I have found an issue! How do I report it?**
 - Report it here on Github or give me a poke in Discord. Make sure to include as much detail as possible so I can help narrow down what's gone wrong! That said, I might not be able to fix things depending on how involved the error is due to my inexperience in coding.

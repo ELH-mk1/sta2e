@@ -17,13 +17,21 @@
       </div>
       <label class="label">{{localize 'sta.actor.belonging.weapon.qualities'}}</label>
       <div class="row">
-        <div class="column-x4 label-top">
+        <!-- <div class="column-x4 label-top">
           <label class="label">{{localize 'sta.item.genericitem.opportunity'}}</label>
           <input type="number" name="system.opportunity" value="{{system.opportunity}}" data-dtype="Number" />
         </div>
         <div class="column-x4 label-top">
           <label class="label">{{localize 'sta.item.genericitem.escalation'}}</label>
           <input type="number" name="system.escalation" value="{{system.escalation}}" data-dtype="Number" />
+        </div> -->
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.actor.belonging.weapon.includescale'}}</label>
+          <input class="" type="checkbox" name="system.includescale" data-dtype="Boolean" {{checked system.includescale}}>   
+        </div>
+        <div class="column-x4 label-top">
+          <label class="label">{{localize 'sta.actor.belonging.weapon.includeweaponmod'}}</label>
+          <input class="" type="checkbox" name="system.includeweaponmod" data-dtype="Boolean" {{checked system.includeweaponmod}}>   
         </div>
         <div class="column-x4 label-top">
           <label class="label">{{localize 'sta.actor.belonging.weapon.damage'}}</label>
@@ -39,14 +47,6 @@
           <label class="label">{{localize 'sta.actor.belonging.weapon.hiddenx'}}</label>
           <input type="number" name="system.qualities.hiddenx" value="{{system.qualities.hiddenx}}" data-dtype="Number" />
         </div>
-        <!-- <div class="column-x4 label-top">
-          <label class="label">{{localize 'sta.actor.belonging.weapon.piercingx'}}</label>
-          <input type="number" name="system.qualities.piercingx" value="{{system.qualities.piercingx}}" data-dtype="Number" />
-        </div> -->
-        <!-- <div class="column-x4 label-top">
-          <label class="label">{{localize 'sta.actor.belonging.weapon.viciousx'}}</label>
-          <input type="number" name="system.qualities.viciousx" value="{{system.qualities.viciousx}}" data-dtype="Number" />
-        </div> -->
         <div class="column-x4 label-top">
           <label class="label">{{localize 'sta.actor.belonging.weapon.versatilex'}}</label>
           <input type="number" name="system.qualities.versatilex" value="{{system.qualities.versatilex}}" data-dtype="Number" />

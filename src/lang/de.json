@@ -49,6 +49,8 @@
   "sta.actor.milestone.edit": "Meilensteine bearbeiten",
   "sta.actor.injury.title": "Verletzungen",
   "sta.actor.belonging.title": "Ausrüstung",
+  "sta.actor.belonging.weapon.includescale": "Schiffsgröße einbeziehen?",
+  "sta.actor.belonging.weapon.includeweaponmod": "Waffenmod einbeziehen?",
   "sta.actor.belonging.weapon.title": "Waffen",
   "sta.actor.belonging.weapon.dmg": "Dmg",
   "sta.actor.belonging.weapon.damage": "Schaden",
@@ -146,7 +148,7 @@
   "sta.item.genericitem.opportunity": "Verzichtskosten",
   "sta.item.genericitem.escalation": "Eskalation",
 
-  "sta.item.talent.title": "Talente",
+  "sta.item.talent.title": "Talente & Sonderregeln",
   "sta.item.talent.type.title": "Typ",
   "sta.item.talent.type.general": "Allgemein",
   "sta.item.talent.type.discipline": "Disziplin",

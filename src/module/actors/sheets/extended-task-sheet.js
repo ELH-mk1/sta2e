@@ -54,6 +54,8 @@ export class STAExtendedTaskSheet extends ActorSheet {
       const work = parseInt(html.find('#work')[0].value);
 
       const trackNumber = Math.ceil(work/5);
+      const breakthroughOne = Math.ceil(work/2);
+      const breakthroughTwo = breakthroughOne + Math.ceil(breakthroughOne/2);
       
       const fullDiv = document.createElement('DIV');
       fullDiv.style = 'width: 100%;';
@@ -74,7 +76,14 @@ export class STAExtendedTaskSheet extends ActorSheet {
             inputDiv.id = 'box-' + (i * 5 + j + 1);
             inputDiv.className = 'box extendedtask';
             inputDiv.innerHTML = (i * 5 + j + 1);
+            if (i * 5 + j + 1 == breakthroughOne) {
+               inputDiv.innerHTML += ' Brk 1'
+            }
+            if (i * 5 + j + 1 == breakthroughTwo) {
+               inputDiv.innerHTML += ' Brk 2'
+            }
           }
+
           inputDiv.style = 'width: calc(100% / ' + 5 + ');';
           rowDiv.appendChild(inputDiv);
         }
