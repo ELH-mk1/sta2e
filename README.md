@@ -4,6 +4,7 @@ An ***UNOFFICIAL*** implementation of Star Trek Adventures Roleplaying Game (2nd
 ## Special Thanks
 - [Mike Schoen](https://github.com/mkscho63/sta) for the original implementation of STA for Foundry VTT
 - [FabulistVtt](https://github.com/FabulistVtt/sta-lcars-ui) for the fancy LCARS CSS module for STA & Foundry VTT
+- [Maxim-Alexandre Lalancette](https://github.com/malalancette) for coming up with the Starship System Destroyed Functionality
 - Modiphius for creating Star Trek Adventures
 
 ![A screenshot showing what the STA2E system looks like](https://github.com/ELH-mk1/sta2e/blob/main/STA2E-Foundry.jpg?raw=true)
@@ -14,7 +15,7 @@ An ***UNOFFICIAL*** implementation of Star Trek Adventures Roleplaying Game (2nd
 - [Use this link](https://raw.githubusercontent.com/ELH-mk1/sta2e/master/src/system.json) when inputting the Manifest URL at the bottom of the *Install System* window in Foundry
 
 **Is this System out yet?**
-- The STA 2E Core Rulebook PDF is now available to those that have pre-ordered the physical copy. Actual sale of the PDF is projected to begin early August 2024. You can get your own copy by visiting either the [US Store](https://modiphius.us/collections/star-trek-adventures-tabletop-rpg/products/star-trek-adventures-the-roleplaying-game-second-edition-core-rulebook) or the [UK Store](https://modiphius.net/collections/star-trek-adventures/products/star-trek-adventures-the-roleplaying-game-second-edition-core-rulebook)
+- The STA 2E Core Rulebook is now available in both Physical and PDF form! You can get your own copy by visiting either the [US Store](https://modiphius.us/collections/star-trek-adventures-tabletop-rpg/products/star-trek-adventures-the-roleplaying-game-second-edition-core-rulebook) or the [UK Store](https://modiphius.net/collections/star-trek-adventures/products/star-trek-adventures-the-roleplaying-game-second-edition-core-rulebook)
 
 **How does this system work?**
 - If you're familiar with the 1st Edition implementation of STA, then you already know 90% of how to get things to work. If you're not, I encourage you to play around a bit before giving me a poke on Discord. I (*elhmk1*) can be found in the Official Modiphius Discord as well as the Foundry VTT one.
@@ -25,6 +26,9 @@ An ***UNOFFICIAL*** implementation of Star Trek Adventures Roleplaying Game (2nd
   - A different stylesheet based on FabulistVtt's module
   - The Complication Range input has been changed to an easy-to-understand slider
   - Modularity with Weapon Damage rather than forcing auto-calculations
+  - Reputation Rolls straight from the sheet
+  - Extended Task Breakthrough marking
+  - Starship System Destroyed functionality
   - And more!
   
 **What's changed from the 1st Edition of STA?**

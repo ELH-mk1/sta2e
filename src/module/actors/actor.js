@@ -119,6 +119,21 @@ export class STASharedActorFunctions {
         selectedDisciplineValue, complicationRange, usingDFocus, speaker);
     }
   }
+  
+    // This handles Reputation Roll from the sheet
+  async rollRepTest(event, currentRep, defaultValue, speaker) {
+    event.preventDefault();
+    if (!defaultValue) defaultValue = 1;
+    // This creates a dialog to gather details regarding the roll and waits for a response
+    const rolldialog = await STARollDialog.create(false, defaultValue);
+    if (rolldialog) {
+      const dicePool = rolldialog.get('numberDice');
+      const complicationRange = parseInt(rolldialog.get('complicationRange'));
+      // Once the response has been collected it then sends it to be rolled.
+      const staRoll = new STARoll();
+      staRoll.performRepTest(dicePool, currentRep, complicationRange, speaker);
+    }
+  }
 	
   // This handles performing an challenge roll using the "Perform Challenge Roll" button.
   async rollChallengeRoll(event, weaponName, defaultValue, speaker) {

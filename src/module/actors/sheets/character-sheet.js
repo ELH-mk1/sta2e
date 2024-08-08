@@ -83,8 +83,8 @@ export class STACharacterSheet extends ActorSheet {
     // Check reputation max/min
     if (!(sheetData.system.reputation))
       sheetData.system.reputation = {};
-    if (sheetData.system.reputation.value > 20) {
-      sheetData.system.reputation.value = 20;
+    if (sheetData.system.reputation.value > 5) {
+      sheetData.system.reputation.value = 5;
     }
     if (sheetData.system.reputation < 0) {
       sheetData.system.reputation = 0;
@@ -145,16 +145,16 @@ export class STACharacterSheet extends ActorSheet {
     // This creates a dynamic Stress tracker. It polls for the value of the fitness attribute, security discipline, and checks for Resolute talent. 
     // With the total value, creates a new div for each and places it under a child called "bar-stress-renderer".
     function stressTrackUpdate() {
-      if (html.find('[data-talent-name="Mental Discipline"]').length > 0) {
+      if (html.find('[data-talent-name*="Mental Discipline"]').length > 0) {
         stressTrackMax = parseInt(html.find('#control')[0].value);  
       }
       else {
         stressTrackMax = parseInt(html.find('#fitness')[0].value);
       }
-      if (html.find('[data-talent-name="Tough"]').length > 0) {
+      if (html.find('[data-talent-name*="Tough"]').length > 0) {
         stressTrackMax += 2;
       }
-      if (html.find('[data-talent-name="Resolute"]').length > 0) {
+      if (html.find('[data-talent-name*="Resolute"]').length > 0) {
         stressTrackMax += parseInt(html.find('#command')[0].value);
       }
       
@@ -466,9 +466,14 @@ export class STACharacterSheet extends ActorSheet {
         parseInt(selectedDisciplineValue), 2, this.actor);
     });
         
-    // If the check-button is clicked it fires the method challenge roll method. See actor.js for further info.
+/*     // If the check-button is clicked it fires the method challenge roll method. See actor.js for further info.
     html.find('.check-button.challenge').click((ev) => {
       staActor.rollChallengeRoll(ev, 'Generic', 0, this.actor);
+    }); */
+    
+    // If the check-button is clicked it fires the reputation roll method. See actor.js for further info.
+    html.find('.check-button.reputation').click((ev) => {
+      staActor.rollRepTest(ev, html.find('#total-rep')[0].value, 1, this.actor);
     });
 
     html.find('.reroll-result').click((ev) => {

@@ -1,9 +1,11 @@
 {
+  "sta.counting.zero": "0",
   "sta.counting.one": "1",
   "sta.counting.two": "2",
   "sta.counting.three": "3",
   "sta.counting.four": "4",
   "sta.counting.five": "5",
+  "sta.counting.fiveplus": "5+",
   
   "sta.counting.sixteen": "16",
   "sta.counting.seventeen": "17",
@@ -11,6 +13,10 @@
   "sta.counting.nineteen": "19",
   "sta.counting.twenty": "20",
 
+  "sta.actor.rollrep": "Roll",
+  "sta.apps.reprimand": "Reprimand",
+  "sta.apps.reprimands": "Reprimands",
+  "sta.apps.reputation": "Reputation Test",
   "sta.actor.character.reputation": "Reputation Track",
   "sta.actor.character.name": "Name",
   "sta.actor.character.rank": "Rank",
@@ -111,6 +117,7 @@
   "sta.actor.starship.system.structure": "Structure",
   "sta.actor.starship.system.weapons": "Weapons",
   "sta.actor.starship.system.breaches": "Breach",
+  "sta.actor.starship.system.systemdestroyed": "This system has been destroyed",
   "sta.actor.starship.department.title": "Departments",
   "sta.actor.starship.department.name": "Department Name",
   "sta.actor.starship.department.command": "Command",
@@ -178,6 +185,7 @@
   "sta.roll.complicationrange": "Complication range is ",
   "sta.roll.complication": "There was a complication!",
   "sta.roll.complicationPlural": "There were |#| complications!",
+  "sta.roll.reprimandPlural": "There were |#| reprimands!",
   "sta.roll.effect": "There was one effect!",
   "sta.roll.effectPlural": "There were |#| effects!",
   "sta.roll.rerollresults": "Reroll results?",

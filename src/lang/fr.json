@@ -1,9 +1,11 @@
 {
+    "sta.counting.zero": "0",
     "sta.counting.one": "1",
     "sta.counting.two": "2",
     "sta.counting.three": "3",
     "sta.counting.four": "4",
     "sta.counting.five": "5",
+    "sta.counting.fiveplus": "5+",
     
     "sta.counting.sixteen": "16",
     "sta.counting.seventeen": "17",
@@ -11,6 +13,10 @@
     "sta.counting.nineteen": "19",
     "sta.counting.twenty": "20",
 
+    "sta.actor.rollrep": "Rouler",
+    "sta.apps.reprimand": "Réprimande",
+    "sta.apps.reprimands": "Réprimandes",
+    "sta.roll.reprimandPlural": "Il y a eu |#| Réprimandes!",
     "sta.actor.character.reputation": "Suivi de Réputation",
     "sta.actor.character.name": "Nom",
     "sta.actor.character.rank": "Grade",
@@ -110,6 +116,7 @@
     "sta.actor.starship.system.structure": "Structure",
     "sta.actor.starship.system.weapons": "Armes",
     "sta.actor.starship.system.breaches": "Coque",
+    "sta.actor.starship.system.systemdestroyed": "Ce système a été détruit",
     "sta.actor.starship.department.title": "Départements",
     "sta.actor.starship.department.name": "Nom de Département",
     "sta.actor.starship.department.command": "Commande",

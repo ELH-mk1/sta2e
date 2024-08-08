@@ -93,7 +93,7 @@ export class STAStarshipSheet extends ActorSheet {
     super.activateListeners(html);
     
     // Allows checking version easily 
-    let versionInfo = game.world.coreVersion; 
+    let versionInfo = game.world.coreVersion;
 
     // Opens the class STASharedActorFunctions for access at various stages.
     const staActor = new STASharedActorFunctions();
@@ -492,6 +492,37 @@ export class STAStarshipSheet extends ActorSheet {
       const attackDamageValue = weaponDamage + scaleDamage + weaponsMod;
       //const attackDamageValue = weaponDamage + securityValue + scaleDamage;
       value.getElementsByClassName('damage')[0].innerText = attackDamageValue;
+    });
+
+    // If the Breach value of a System is equal or greater than HALF the ship's Scale, then this System has been destroyed. (STA 2e - Core Book p. 311)
+    // When the Breach input changes and it's reached the threshold, uncheck its system's checkbox and add a "Red Alert" image on top of the system name and checkbox.
+    html.find('.selector.system').each( function(index, value) {
+      
+      // Constants
+      const $systemCheckbox = $(value);
+      const $systemBreach = $systemCheckbox.siblings('.breach');
+      const $systemDestroyed = $systemCheckbox.siblings('.system-destroyed');
+
+      // Values
+      const shipScaleValue = Number.parseInt($('#scale').attr('value'));
+      const breachValue = Number.parseInt($systemBreach.attr('value'));
+
+      // Breach-Scale Threshold
+      const isSystemDestroyed = breachValue >= (Math.ceil(shipScaleValue / 2)) ? true : false;
+
+      // If the system is destroyed
+      if (isSystemDestroyed) {
+
+        // Uncheck the system's checkbox
+        $systemCheckbox.prop('checked', false);
+
+        // Add a "Red Alert" zone on top of the system's name and checkbox to prevent the user to click on the checkbox
+        $systemDestroyed.show();
+      }
+      else {
+        // Remove the "Red Alert" zone on top of the system's name and checkbox
+        $systemDestroyed.hide();
+      }
     });
   }
 }

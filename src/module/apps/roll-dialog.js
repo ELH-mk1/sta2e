@@ -5,7 +5,7 @@ export class STARollDialog {
       // Grab the RollDialog HTML file/
       html = await renderTemplate('systems/sta2e/templates/apps/dicepool-attribute.html', {'defaultValue': defaultValue});
     } else {
-      html = await renderTemplate('systems/sta2e/templates/apps/dicepool-challenge.html', {'defaultValue': defaultValue});
+      html = await renderTemplate('systems/sta2e/templates/apps/reputation-roll.html', {'defaultValue': defaultValue});
     }
 
     // Create a new promise for the HTML above.

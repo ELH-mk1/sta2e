@@ -1,9 +1,11 @@
 {
+  "sta.counting.zero": "0",
   "sta.counting.one": "1",
   "sta.counting.two": "2",
   "sta.counting.three": "3",
   "sta.counting.four": "4",
   "sta.counting.five": "5",
+  "sta.counting.fiveplus": "5+",
 
   "sta.counting.sixteen": "16",
   "sta.counting.seventeen": "17",
@@ -11,6 +13,10 @@
   "sta.counting.nineteen": "19",
   "sta.counting.twenty": "20",
 
+  "sta.actor.rollrep": "Rodar",
+  "sta.apps.reprimand": "Reprimenda",
+  "sta.apps.reprimands": "Reprimendas",
+  "sta.roll.reprimandPlural": "Tivemos |#| Reprimendas!",
   "sta.actor.character.reputation": "Total de Reputação",
   "sta.actor.character.name": "Nome",
   "sta.actor.character.rank": "Patente",
@@ -110,6 +116,7 @@
   "sta.actor.starship.system.structure": "Estrutura",
   "sta.actor.starship.system.weapons": "Armas",
   "sta.actor.starship.system.breaches": "Brecha",
+  "sta.actor.starship.system.systemdestroyed": "Este sistema foi destruído",
   "sta.actor.starship.department.title": "Departmentos",
   "sta.actor.starship.department.name": "Nome do Departmento",
   "sta.actor.starship.department.command": "Comando",

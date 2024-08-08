@@ -45,7 +45,11 @@
 .sta .btn2 {
   background-color: #CC2233;
   color: #000000;
-  border-radius: 20px;
+   border-radius: 20px;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+   margin-left: 5px;
   font-weight: bold; }
   .sta .btn2:hover {
     box-shadow: none;
@@ -349,7 +353,7 @@
         box-shadow: none;
         cursor: pointer; }
       .sta.sheet.actor .main .row .column .section .row .image .chat:hover {
-        content: url("/systems/sta/assets/icons/chat-bubble.svg");
+        content: url("/systems/sta2e/assets/icons/chat-bubble.svg");
         box-shadow: none;
         cursor: pointer; }
       .sta.sheet.actor .main .row .column .section .row .image .click-to-nav {
@@ -839,3 +843,22 @@
       background-color: #FFEEAA; }
 
 /*#endregion*/
+
+
+/* System destroyed */
+.sta.sheet.actor .main .row .column .section.system .stat {
+  position: relative;
+}
+.sta.sheet.actor .main .row .column .section.system .stat .system-destroyed {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 66%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 75%);
+  background-image: url("/systems/sta2e/assets/images/red-alert-condition-red.png");
+  background-position: center center;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+}
