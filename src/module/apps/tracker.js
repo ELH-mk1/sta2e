@@ -6,7 +6,7 @@ export class STATracker extends Application {
    * @readonly
    * @constant {string}
    */
-  static UPDATE_SOCKET_NAME = "system.sta";
+  static UPDATE_SOCKET_NAME = "system.sta2e";
 
   /**
    * An enumeration to identify different messages transmitted on the tracker update socket.
