@@ -45,8 +45,8 @@
             "flags": {}
 		},
 		{
-			"lang": "pt",
-			"name": "Portugese",
+			"lang": "pt-BR",
+			"name": "Português (Brasil)",
 			"path": "lang/pt.json",
             "flags": {}
 		}
