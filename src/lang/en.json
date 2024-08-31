@@ -209,5 +209,26 @@
   "sta.dice.dsn.ufp.gold": "UFP Gold",
   "sta.dice.dsn.ufp.red": "UFP Red",
   "sta.dice.dsn.ufp.theme.black": "Star Trek Adventures UFP (Black)",
-  "sta.dice.dsn.ufp.theme.white": "Star Trek Adventures UFP (White)"
+  "sta.dice.dsn.ufp.theme.white": "Star Trek Adventures UFP (White)",
+  
+  "sta.actor.belonging.weapon.areatooltip": "This weapon impacts a wider area and can affect several targets at once. When you succeed at an attack, additional targets in the same zone may be hit by spending 1 Momentum for each additional target (Repeatable). This attack may Succeed at Cost (see page 259)",
+  "sta.actor.belonging.weapon.intensetooltip": "When making an attack with this weapon, you may increase the damage by 1 by spending 1 Momentum, rather than 2. This is Repeatable.",
+  "sta.actor.belonging.weapon.accuratetooltip": "If you perform the Aim minor action before making an attack with this weapon, you may re-roll up to two d20s in your dice pool, rather than only one.",
+  "sta.actor.belonging.weapon.chargetooltip": "If you perform the Prepare minor action before attacking with this weapon, you may add one of the following qualities to the attack: Area, Intense, or Piercing. If you choose Area, the attack’s severity is reduced by 1.",
+  "sta.actor.belonging.weapon.cumbersometooltip": "You cannot attack with a cumbersome weapon unless you take the Prepare minor action on the same turn.",
+  "sta.actor.belonging.weapon.debilitatingtooltip": "The Difficulty to treat or to heal injuries caused by this weapon is increased by 1",
+  "sta.actor.belonging.weapon.depletingtooltip": "This attack strips away the protective layers of deflector shields. The attack cannot cause the ship to be shaken, but the Momentum cost to increase damage is reduced to 1",
+  "sta.actor.belonging.weapon.grenadetooltip": "You can attack a target at up to Medium range and have enough grenades for three separate attacks",
+  "sta.actor.belonging.weapon.inaccuratetooltip": "The weapon is imprecise and clumsy. You do not benefit from the Aim minor action when making an attack with this weapon.",
+  "sta.actor.belonging.weapon.spreadtooltip": "Attacks with this weapon reduce the cost of the Devastating Attack Momentum spend to 1. This is Repeatable",
+  "sta.actor.belonging.weapon.dampeningtooltip": "This attack drains the target’s reserve power, causing widespread disruption. If the target has Reserve Power available, it loses Reserve Power",
+  "sta.actor.belonging.weapon.calibrationtooltip": "This weapon needs to be calibrated before firing. The weapon cannot be fired unless a Prepare minor action is performed before the Attack major action in the same turn.",
+  "sta.actor.belonging.weapon.devastatingtooltip": "Tasks to repair breaches caused by this weapon increase in Difficulty by 1.",
+  "sta.actor.belonging.weapon.highyieldtooltip": "This weapon inflicts massive damage to energy vessels. If the attack inflicts one or more breaches to a system, it inflicts one additional breach (or steps up the Potency of a breach inflicted by 1—attacker’s choice)",
+  "sta.actor.belonging.weapon.hiddenxtooltip": "This weapon system is concealed from scans. When the weapon is hidden, it cannot be detected unless a specific scan is attempted; this scan is a task with a Difficulty of X.",
+  "sta.actor.belonging.weapon.piercingxtooltip": "Ignore the target's Protection and Resistance rating(s).",
+  "sta.actor.belonging.weapon.versatilextooltip": "If an attack with this weapon is successful, it gains X points of bonus Momentum. Bonus Momentum cannot be saved.",
+  "sta.actor.belonging.weapon.persistentxtooltip": "When this weapon hits, you may spend 1–3 Momentum. At the end of each round, the target suffers half the weapon’s damage rating (round up) again. This effect lasts for a number of rounds equal to the Momentum spent.",
+  "sta.actor.belonging.weapon.slowingtooltip": "Until the end of the current round, characters aboard the target vessel cannot use the Keep the Initiative Momentum spend",
+  "sta.actor.belonging.weapon.jammingtooltip": "This weapon sends out a scattering field, disrupting the target’s sensors or communications systems. Until the end of the current round, the target increases the Difficulty for all tasks assisted by Communications and Sensors by 1."
 }

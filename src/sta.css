@@ -661,13 +661,48 @@
   flex-direction: row;
   text-align: center;
   flex-wrap: wrap; }
-  .sta.roll.generic .dice-roll .dice-result .tags .tag {
+ .sta.roll.generic .dice-roll .dice-result .tags .tag {
+    position: relative;
     width: calc(100%/3);
     font-size: 12px;
     flex-grow: 1;
     border: 0.5px solid #0F0F0F;
     border-radius: 3px;
     background-color: rgba(255, 255, 255, 0.3); }
+
+ .sta.roll.generic .dice-roll .dice-result .tags .tag .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+  
+  /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50px;
+
+    opacity: 0;
+    transition: opacity 1s;}
+
+.sta.roll.generic .dice-roll .dice-result .tags .tag:hover .tooltiptext {
+    visibility: visible; 
+    opacity: 1}
+
+ .sta.roll.generic .dice-roll .dice-result .tags .tag .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent; }
 
 .sta.roll.generic .dice-roll .dice-total.effect {
   color: #33CCCC; }

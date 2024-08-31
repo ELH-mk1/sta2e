@@ -442,31 +442,30 @@ export class STARoll {
     if (item.system.qualities.melee) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.melee')+'</div>';
     if (item.system.qualities.ranged) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.ranged')+'</div>';
     // Space tags
-    if (item.system.range == "close") tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.close')+'</div>';
+    if (item.system.range == "close") tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.close')+ '</div>';
     if (item.system.range == "medium") tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.medium')+'</div>';
     if (item.system.range == "long") tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.long')+'</div>';
     
-    if (item.system.qualities.accurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.accurate')+'</div>';
-    
-    if (item.system.qualities.area) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.area')+'</div>';
-    if (item.system.qualities.calibration) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.calibration')+'</div>';
-    if (item.system.qualities.charge) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.charge')+'</div>';
-    if (item.system.qualities.cumbersome) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.cumbersome')+'</div>';
-    if (item.system.qualities.dampening) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.dampening')+'</div>';
-    if (item.system.qualities.debilitating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.debilitating')+'</div>';
-    if (item.system.qualities.depleting) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.depleting')+'</div>';
-    if (item.system.qualities.devastating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.devastating')+'</div>';
-    if (item.system.qualities.grenade) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.grenade')+'</div>';
-    if (item.system.qualities.hiddenx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.hiddenx') + ' ' + item.system.qualities.hiddenx +'</div>';
-    if (item.system.qualities.highyield) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.highyield')+'</div>';
-    if (item.system.qualities.inaccurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.inaccurate')+'</div>';
-    if (item.system.qualities.intense) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.intense')+'</div>';
-    if (item.system.qualities.jamming) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.jamming')+'</div>';
-    if (item.system.qualities.persistentx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.persistentx')+'</div>';
-    if (item.system.qualities.piercingx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx')+'</div>';
-    if (item.system.qualities.slowing) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.slowing')+'</div>';
-    if (item.system.qualities.spread) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.spread')+'</div>';
-    if (item.system.qualities.versatilex > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.versatilex') + ' ' + item.system.qualities.versatilex +'</div>';
+    if (item.system.qualities.accurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.accurate')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.accuratetooltip') + '</span>' +'</div>';
+    if (item.system.qualities.area) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.area')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.areatooltip') + '</span>' +'</div>';
+    if (item.system.qualities.calibration) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.calibration')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.calibrationtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.charge) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.charge')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.chargetooltip') + '</span>' +'</div>';
+    if (item.system.qualities.cumbersome) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.cumbersome')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.cumbersometooltip') + '</span>' +'</div>';
+    if (item.system.qualities.dampening) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.dampening')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.dampeningtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.debilitating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.debilitating')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.debilitatingtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.depleting) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.depleting')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.depletingtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.devastating) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.devastating')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.devastatingtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.grenade) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.grenade')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.grenadetooltip') + '</span>' +'</div>';
+    if (item.system.qualities.hiddenx > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.hiddenx') + ' ' + item.system.qualities.hiddenx + '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.hiddenxtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.highyield) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.highyield')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.highyieldtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.inaccurate) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.inaccurate')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.inaccuratetooltip') + '</span>' +'</div>';
+    if (item.system.qualities.intense) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.intense')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.intensetooltip') + '</span>' +'</div>';
+    if (item.system.qualities.jamming) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.jamming')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.jammingtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.persistentx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.persistentx')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.persistentxtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.piercingx) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingx')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.piercingxtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.slowing) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.slowing')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.slowingtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.spread) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.spread')+ '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.spreadtooltip') + '</span>' +'</div>';
+    if (item.system.qualities.versatilex > 0) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.versatilex') + ' ' + item.system.qualities.versatilex + '<span class=\'tooltiptext\'> '+game.i18n.format('sta.actor.belonging.weapon.versatilextooltip') + '</span>' +'</div>';
     
     //if (item.system.qualities.deadly) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.deadly')+'</div>';
     //if (item.system.qualities.stun) tags += '<div class=\'tag\'> '+game.i18n.format('sta.actor.belonging.weapon.stun')+'</div>';
